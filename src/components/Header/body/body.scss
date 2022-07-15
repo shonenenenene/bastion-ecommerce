@@ -1,0 +1,28 @@
+@import "../../App/style.scss";
+
+.header__body {
+    background: white;
+    .header__body_container {
+        min-height: 110px;
+        @include flex(space-between, center);
+        div, img {
+            margin-right: 15px;
+        }
+        .h {
+            width: 115px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.009em;
+        }
+        .catalog {
+            width: 145px;
+        }
+        .input {
+            max-width: 545px;
+        }
+        .fav-cart {
+            
+        }
+    }
+}

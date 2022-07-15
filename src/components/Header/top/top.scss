@@ -1,0 +1,34 @@
+@import "../../App/style.scss";
+
+.top_container {
+    @include flex (space-between, center);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.009em;
+    min-height: 50px;
+    .top_list {
+        @include flex (space-between, center);
+        .top_item {
+            margin-right: 25px;
+        }
+    }
+    .top_contacts {
+        @include flex (space-between, center);
+        .call {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 1px;
+        }
+        .location {
+            color: $coral;
+            font-weight: 400;
+            margin-left: 55px;
+        }
+        .mail {
+            color: #333333;
+            margin-left: 65px;
+        }
+    }
+}
