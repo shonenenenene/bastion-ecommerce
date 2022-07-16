@@ -20,15 +20,48 @@
             font-size: 16px;
             line-height: 19px;
             letter-spacing: 1px;
+            &::before {
+                position: relative;
+                right: 8px;
+                top: 1px;
+                content: "";
+                display: block;
+                float: left;
+                width: 15px;
+                height: 15px;
+                background-image: url("./../../../../public/img/call.png");
+            }
         }
         .location {
             color: $coral;
             font-weight: 400;
             margin-left: 55px;
+            &::before {
+                position: relative;
+                right: 8px;
+                top: -1px;
+                content: "";
+                display: block;
+                float: left;
+                width: 11px;
+                height: 15px;
+                background-image: url("./../../../../public/img/location.png");
+            }
         }
         .mail {
             color: #333333;
             margin-left: 65px;
+            &::before {
+                position: relative;
+                right: 8px;
+                top: 1px;
+                content: "";
+                display: block;
+                float: left;
+                width: 15px;
+                height: 11px;
+                background-image: url("./../../../../public/img/mail.png");
+            }
         }
     }
 }
