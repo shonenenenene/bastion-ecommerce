@@ -1,0 +1,67 @@
+@import "../../../../App/style.scss";
+
+.items_card {
+    border: 1px solid #e6e6e6;
+    @include flex (space-between, flex-start);
+    flex-direction: column;
+    height: 425px;
+    max-width: 280px;
+    padding: 20px;
+    .bonuses {
+        @include flex (flex-start, center);
+        text-transform: uppercase;
+        color: white;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        letter-spacing: 0.009em;
+        div {
+            margin-right: 5px;
+        }
+        .hit {
+            background: #FD7272;
+            border-radius: 50px;
+            padding: 5px 13px;
+        }
+        .sale {
+            background: #E67E22;
+            border-radius: 50px;
+            padding: 5px 10px;
+        }
+        .stock {
+            background: #27AE60;
+            border-radius: 50px;
+            padding: 5px 10px;
+        }
+    }
+    .card-img {
+        width: 180px;
+        height: auto;
+        align-self: center;
+    }
+    .standart {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        letter-spacing: 0.009em;
+        color: $coral;
+        border: 1px solid $coral;
+        background: rgba($color: $coral, $alpha: 0.1);
+        border-radius: 2px;
+        padding: 4px 6px;
+    }
+    h3 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.009em;
+    }
+    .item-price {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.009em;
+    }
+}
