@@ -1,0 +1,44 @@
+@import "../../App/style.scss";
+
+.add-type {
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 12px;
+        text-align: center;
+        letter-spacing: 0.009em;
+        color: $coral;
+        background: rgba($color: $coral, $alpha: 0.1);
+        border-radius: 2px;
+        padding: 4px 6px;
+        input {
+            border-radius: 15px;
+            padding: 4px 15px;
+        }
+        button {
+            background-color: white;
+            border-radius: 15px;
+            padding: 4px 15px;
+            width: 200px;
+            border: 1px solid $coral;
+            transition: 0.3s;
+            &:hover {
+                background: rgba($color: $coral, $alpha: 0.8);
+                box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+                color:white;
+            }
+            &:disabled {
+                color: rgba($color: gray, $alpha: 0.8);
+                border: 1px solid gray;;
+                &:hover {
+                    background: rgba($color: $coral, $alpha: 0.05);
+                    box-shadow: 0 0 1px 1px rgb(0, 0, 0);
+                }
+            }
+        }
+    }
+
+}
