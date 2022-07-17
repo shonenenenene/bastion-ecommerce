@@ -1,0 +1,67 @@
+@import "../../App/style.scss";
+
+.add-product {
+    margin-top: 70px;
+    form {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 12px;
+        text-align: center;
+        letter-spacing: 0.009em;
+        color: $coral;
+        background: rgba($color: $coral, $alpha: 0.1);
+        border-radius: 4px;
+        padding: 4px 6px;
+        .product-id {
+            width: 100px;
+            border-radius: 4px;
+            padding: 2px 6px;
+        }
+        .product-name {
+            border-radius: 4px;
+            width: 200px;
+            padding: 2px 6px;
+        }
+        .select-type {
+            width: 170px;
+            border-radius: 4px;
+            padding: 2px 6px;
+        }
+        .price {
+            border-radius: 4px;
+            width: 200px;
+            padding: 2px 6px;
+        }
+        .standart {
+            border-radius: 4px;
+            width: 140px;
+            padding: 2px 6px;
+        }
+        .add-product-btn {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2px 6px;
+            width: 200px;
+            border: 1px solid $coral;
+            transition: 0.3s;
+            &:hover {
+                background: rgba($color: $coral, $alpha: 0.8);
+                box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+                color:white;
+            }
+            &:disabled {
+                color: rgba($color: gray, $alpha: 0.8);
+                border: 1px solid gray;;
+                &:hover {
+                    background: rgba($color: $coral, $alpha: 0.05);
+                    box-shadow: 0 0 1px 1px rgb(0, 0, 0);
+                }
+            }
+        }
+    }
+}
