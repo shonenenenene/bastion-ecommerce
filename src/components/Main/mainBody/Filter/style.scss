@@ -23,4 +23,30 @@
             background-size: contain;
         }
     }
+    .categ_title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.009em;
+        border: 1px solid #E6E6E6;
+        height: 60px;
+        display: flex;
+        align-items: center;
+
+        h5 {
+            padding-left: 32px;
+        }
+
+        &::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            position: relative;
+            left: 22px;
+            background-image: url("./../../../../../public/img/catalogred.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
 }

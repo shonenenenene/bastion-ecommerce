@@ -3,7 +3,10 @@ import './style.scss'
 
 const Filter = () => {
   return (
-      <div className='filter'>
+    <div className='filter'>
+          <div className='categ_title'>
+            <h5>Категории</h5>
+          </div>
           <div className='filter_title'>
             <h5>Фильтры</h5>
           </div>
