@@ -7,26 +7,9 @@
 .footer_container {
     margin-bottom: 120px;
     position: relative;
-    h3 {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
-        letter-spacing: 0.009em;
-        margin-bottom: 20px;
-    }
-    p {
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 18px;
-        letter-spacing: 0.009em;
-    }
-    .hide-desc {
-        color: $coral;
-        margin-top: 20px;
-    }
     .feedback {
         position: absolute;
-        bottom: -198px;
+        bottom: -80px;
     }
 }  
 .footer-img {

@@ -6,12 +6,12 @@ import './style.scss'
 
 const Products = () => {
   return (
-    <div className='products'>
+    <section className='products'>
         <div className='products_container container'>
           <AddProduct />
           <ProductList/>
         </div>
-    </div>
+    </section>
   )
 }
 

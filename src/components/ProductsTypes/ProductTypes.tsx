@@ -5,12 +5,12 @@ import './style.scss'
 
 const ProductTypes = () => {
   return (
-    <div className='product-types'>
+    <section className='product-types'>
           <div className='product-types_container container'>
               <AddType />
               <TypeList />
           </div> 
-    </div>
+    </section>
   )
 }
 

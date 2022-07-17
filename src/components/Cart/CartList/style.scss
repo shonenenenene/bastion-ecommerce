@@ -1,0 +1,18 @@
+@import "../../App/style.scss";
+
+.cart-list-footer {
+    @include flex(flex-end, center);
+    height: 85px;
+    padding-right: 40px;
+    .cart-clear {
+        @include flex(center, center);
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.009em;
+        color: $coral;
+        .clear-btn {
+            margin-right: 15px;
+        }
+    }
+}

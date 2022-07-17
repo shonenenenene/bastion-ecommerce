@@ -1,13 +1,16 @@
 import React from 'react'
+import CartList from './CartList/CartList'
+import OrderForm from './OrderForm/OrderForm'
 import './style.scss'
 
 const Cart = () => {
   return (
-    <div className='cart'>
+    <section className='cart'>
       <div className='cart_container container'>
-        
+        <CartList />
+        <OrderForm/>
       </div>
-    </div>
+    </section>
   )
 }
 
