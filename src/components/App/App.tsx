@@ -4,6 +4,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import ProductTypes from '../ProductsTypes/ProductTypes';
 import Products from '../Products/Products';
+import Cart from '../Cart/Cart';
 
 import './style.scss';
 
@@ -14,7 +15,8 @@ function App() {
       <Header />
       {/* <Main /> */}
       {/* <ProductTypes/> */}
-      <Products/>
+      {/* <Products/> */}
+      <Cart/>
       <Footer />
     </div>
   );

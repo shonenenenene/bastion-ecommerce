@@ -1,0 +1,23 @@
+@import "../../App/style.scss";
+
+.product-item {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 0.009em;
+    color: $coral;
+    background: rgba($color: $coral, $alpha: 0.1);
+    border-radius: 20px;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    div {
+        border-radius: 15px;
+        padding: 4px 15px;
+        }
+}
