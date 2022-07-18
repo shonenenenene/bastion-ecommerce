@@ -2,3 +2,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+@media (max-width: 900px) {
+    .items_list {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .items_list {
+        grid-template-columns: 1fr !important;
+        margin-left: 10vw;
+    }
+}

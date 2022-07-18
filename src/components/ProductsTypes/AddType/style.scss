@@ -42,3 +42,11 @@
     }
 
 }
+
+@media (max-width: 900px) {
+    .add-type {
+        form {
+            grid-template-columns: 1fr;
+        }
+    }
+}

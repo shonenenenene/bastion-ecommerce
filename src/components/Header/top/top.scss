@@ -8,18 +8,20 @@
     letter-spacing: 0.009em;
     min-height: 50px;
     .top_list {
-        @include flex (space-between, center);
+        @include flex (flex-start, center);
         .top_item {
-            margin-right: 25px;
+            margin: 5px 25px 5px 0;
         }
     }
     .top_contacts {
-        @include flex (space-between, center);
+        @include flex (flex-start, center);
+        margin: 15px 0;
         .call {
             font-weight: 700;
             font-size: 16px;
             line-height: 19px;
             letter-spacing: 1px;
+            margin-left: 10px;
             &::before {
                 position: relative;
                 right: 8px;
@@ -65,3 +67,28 @@
         }
     }
 }
+
+    @media (max-width: 940px) {
+        .top_container {
+            @include flex (center, center);
+            flex-direction: column;
+        }
+    }
+
+        @media (max-width: 490px) {
+            .top_list {
+                @include flex (center, center);
+                flex-direction: column;
+                .top_item {
+                    margin: 10px !important;
+                }
+            }
+            .top_contacts {
+                @include flex (center, center);
+                flex-direction: column;
+                div {
+                    margin: 10px !important;
+                    padding: 0 !important;
+                }
+            }
+    }

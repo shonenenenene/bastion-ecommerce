@@ -9,7 +9,7 @@
             margin-right: 15px;
         }
         .logo-and-friends {
-            @include flex(space-between, center);
+            @include flex(center, center);
             .h {
                 width: 115px;
                 font-weight: 400;
@@ -121,3 +121,22 @@
         }
     }
 }
+
+    @media (max-width: 800px) {
+        .header__body_container {
+            @include flex(center, center);
+            flex-direction: column;
+            .fav-cart {
+                margin-left: 0 !important;
+            }
+            div {
+                margin: 10px;
+            }
+        }
+     
+    }
+
+
+    @media (max-width: 490px) {
+
+    }

@@ -9,3 +9,10 @@
     grid-template-columns: 3fr 1fr;
     background-color: white;
 }
+
+@media (max-width: 600px) {
+    .cart_container {
+        grid-template-columns: 1fr;
+        background-color: white;
+    }
+}

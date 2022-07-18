@@ -65,3 +65,12 @@
         }
     }
 }
+
+
+@media (max-width: 1066px) {
+    .add-product {
+        form {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -21,3 +21,10 @@
         padding: 4px 15px;
         }
 }
+
+
+@media (max-width: 470px) {
+    .product-item {
+        grid-template-columns: 1fr
+    }
+}

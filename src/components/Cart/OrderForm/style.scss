@@ -1,0 +1,174 @@
+@import '../../App/style.scss';
+
+.order-form {
+    outline: 1px solid #e6e6e6;
+    h3 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        outline: 1px solid #e6e6e6;
+        padding: 18px 0 18px 20px;
+    }
+    form {
+        .cont-info {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.009em;
+            color: #B3B3B3;
+            padding: 18px 0 30px 20px;
+        }
+
+        .full-name {
+            padding: 8px 0 8px 30px;
+            border-bottom: 1px solid #e6e6e6;
+            margin: 0 20px 15px 20px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                background: url("../../../../public/img/user.svg");
+                width: 14px;
+                height: 14px;
+                left: 10px;
+                top: 10px;
+                opacity: 0.6;
+            }
+        }
+        .phone {
+            padding: 8px 0 8px 30px;
+            border-bottom: 1px solid #e6e6e6;
+            margin: 0 20px 15px 20px;
+            position: relative;
+                &::before {
+                position: absolute;
+                content: "";
+                background: url("../../../../public/img/call.png");
+                width: 15px;
+                height: 14px;
+                left: 9px;
+                top: 10px;
+                opacity: 0.5;
+            }
+        }
+        .mail {
+            padding: 8px 0 8px 30px;
+            border-bottom: 1px solid #e6e6e6;
+            margin: 0 20px 15px 20px;
+            position: relative;
+                &::before {
+                position: absolute;
+                content: "";
+                background: url("../../../../public/img/mail-icon.svg");
+                width: 14px;
+                height: 14px;
+                left: 10px;
+                top: 10px;
+            }
+        }
+        .org {
+             padding: 8px 0 8px 30px;
+            border-bottom: 1px solid #e6e6e6;
+            margin: 0 20px 15px 20px;
+            position: relative;
+                &::before {
+                position: absolute;
+                content: "";
+                background: url("../../../../public/img/briefcase.svg");
+                width: 14px;
+                height: 14px;
+                left: 10px;
+                top: 10px;
+            }            
+        }
+    }
+    .order-total {
+        margin-top: 40px;
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        .result {
+            @include flex(space-between, center);
+            width: 100%;
+            p {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 1px;
+                color: black;
+                padding-left: 20px;
+            }
+            .order-total-price {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: right;
+                letter-spacing: 1px;
+                color: $coral;
+                padding-right: 20px;
+            }
+        }
+
+    }
+    button {
+        background-color: $coral;
+        height: 42px;
+        width: 240px;
+        color: white;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.009em;
+        border-radius: 4px;
+        padding: 12px 38px 12px 70px;
+        margin: 20px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background: url("../../../../public/img/cart-white.svg");
+            width: 17px;
+            height: 16px;
+            left: 30px;
+            top: 13px;
+        }  
+
+    }
+    .order-offer {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.009em;
+        color: $coral;
+        width: 240px;
+        height: 62px;
+        border: 1px solid $coral;
+        border-radius: 4px;
+        padding: 12px 38px 12px 70px;
+        margin: 20px;
+        margin-top: 0;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background: url("../../../../public/img/order-offer.svg");
+            width: 18px;
+            height: 18px;
+            left: 30px;
+            top: 21px;
+        }  
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        button {
+            margin: 20px auto !important;
+        }
+        .order-offer {
+            margin: 10px auto !important;
+        }
+    }
+}
