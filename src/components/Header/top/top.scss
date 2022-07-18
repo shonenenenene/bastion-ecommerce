@@ -11,6 +11,15 @@
         @include flex (flex-start, center);
         .top_item {
             margin: 5px 25px 5px 0;
+            transition: 0.3s;
+            &:hover {
+                color: $coral;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            
         }
     }
     .top_contacts {

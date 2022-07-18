@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
@@ -9,14 +10,17 @@ import Cart from '../Cart/Cart';
 import './style.scss';
 
 
+
 function App() {
   return (
     <div className='wrapper'>
       <Header />
-      {/* <Main /> */}
-      {/* <ProductTypes/> */}
-      <Products/>
-      {/* <Cart/> */}
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/productstypes' element={<ProductTypes/>} />
+        <Route path='/products' element={<Products/>} />
+        <Route path='/cart' element={<Cart/>}/>
+      </Routes>
       <Footer />
     </div>
   );

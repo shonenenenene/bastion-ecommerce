@@ -1,4 +1,5 @@
-import React, {FC} from 'react'
+import React, { FC } from 'react'
+import { Link } from 'react-router-dom'
 import './body.scss'
 
 const Body:FC = () => {
@@ -15,7 +16,7 @@ const Body:FC = () => {
               </div>
               <div className='fav-cart'>
                   <a className='fav'>Избранное</a>
-                  <a className='cart'>Корзина</a>
+                  <Link to="/cart"><a className='cart'>Корзина</a></Link>
               </div>
         </div>
     </div>

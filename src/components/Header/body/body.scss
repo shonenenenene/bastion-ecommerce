@@ -86,6 +86,14 @@
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
+                text-decoration: none;
+                color: inherit;
+                border-radius: 10px;
+                transition: 0.3s;
+                &:hover {
+                    color: $coral;
+                    background-color: rgba($color: rgb(177, 177, 177), $alpha: 0.1);
+                }
             }
             .fav {
                 margin-right: 10px;

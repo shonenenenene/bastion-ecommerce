@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './top.scss'
 
 
@@ -7,9 +8,9 @@ const Top = () => {
     <nav className='header__top'>
         <div className='top_container container'>
             <ul className='top_list'>
-                <li className='top_item'>Типы продуктов</li>
-                <li className='top_item'>Продукты</li>
-                <li className='top_item'>Выгоды для вас</li>
+                <li className='top_item'><Link to="/">Главная</Link></li>
+                <li className='top_item'><Link to="/productstypes">Типы продуктов</Link></li>
+                <li className='top_item'><Link to="/products">Продукты</Link></li>
                 <li className='top_item'>Гарантии</li>
                 <li className='top_item'>Контакты</li>
             </ul>
