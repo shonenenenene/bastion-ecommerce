@@ -1,11 +1,14 @@
 import React from 'react'
+import { IProductType } from '../../../types'
 import './style.scss'
 
-const TypeItem = () => {
+
+const TypeItem = ({typeId, typeName}: IProductType) => {
+
   return (
     <div className='type-item'>
-          <div className='type-item-name'>wowoow</div>  
-          <div className='type-item-id'>6309678</div>  
+        <div className='type-item-name'>{ typeName }</div>  
+      <div className='type-item-id'>{typeId}</div>  
     </div>
   )
 }

@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import './style.scss'
 
-const OrderForm = () => {
+const OrderForm:FC = () => {
   return (
     <div className='order-form'>
       <h3>Заказ</h3>

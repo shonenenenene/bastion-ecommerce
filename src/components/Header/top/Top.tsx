@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 import './top.scss'
 
 
-const Top = () => {
+const Top:FC = () => {
   return (
     <nav className='header__top'>
         <div className='top_container container'>

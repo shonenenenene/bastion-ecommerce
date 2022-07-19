@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import './style.scss'
 
-const CartItem = () => {
+const CartItem:FC = () => {
   return (
     <div className='cart-item'>
           <div className='cart-item-img'>
