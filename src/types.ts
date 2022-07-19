@@ -1,6 +1,5 @@
-
 export interface IProductType {
-    typeId: number
+    typeId?: number
     typeName: string
 }
 
@@ -13,6 +12,10 @@ export interface IProduct extends IProductType {
     productName: string
     price: number
     standart: string
+}
+
+export interface IProductsState {
+    products: IProduct[]
 }
 
 export interface IUserAction {

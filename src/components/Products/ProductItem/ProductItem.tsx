@@ -1,14 +1,15 @@
 import React from 'react'
+import { IProduct } from '../../../types'
 import './style.scss'
 
-const ProductItem = () => {
+const ProductItem = ({ typeName, productId, productName, price, standart }: IProduct) => {
   return (
     <div className='product-item'>
-          <div className='item-id'>42</div>
-          <div className='item-name'>rwrew</div>
-          <div className='item-type'>gssdfh</div>
-          <div className='item-price'>534</div>
-          <div className='item-standart'>bxcv4563</div>
+      <div className='item-id'>{ productId }</div>
+      <div className='item-name'>{ productName }</div>
+      <div className='item-type'>{ typeName }</div>
+      <div className='item-price'>{ price }</div>
+      <div className='item-standart'>{ standart }</div>
     </div>
   )
 }

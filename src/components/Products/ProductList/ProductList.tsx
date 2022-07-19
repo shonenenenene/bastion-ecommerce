@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { FC } from 'react'
 import ProductItem from '../ProductItem/ProductItem'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import './style.scss'
 
-const ProductList = () => {
+const ProductList: FC = () => {
+  
+  const products = useTypedSelector(state => state.productsReducer.products)
+  console.log(products)
   return (
     <div className='product-list'>
-      <ProductItem />
-      <ProductItem />
-      <ProductItem />
-      <ProductItem/>
+      {products.map((e) => {
+        return <ProductItem key={e.productId} typeName={e.typeName} productId={e.productId} productName={e.productName} price={e.price} standart={ e.standart } />
+      }) }
     </div>
   )
 }

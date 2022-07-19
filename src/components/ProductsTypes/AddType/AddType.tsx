@@ -10,7 +10,6 @@ const AddType = () => {
   const [inputIdValue, setInputIdValue] = useState('')
   const [disabled, setDisabled] = useState(false)
   const productTypes = useTypedSelector(state => state.typesReducer.productTypes)
-  console.log(productTypes)
 
   const addType = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -42,8 +41,8 @@ const AddType = () => {
   return (
     <div className='add-type'>
           <form>
-              <input onChange={e => inputNameHandler(e)} name='name' type="text" value={inputNameValue} placeholder='Имя типа'/>
-              <input onChange={e => inputIdHandler(e)} name='id' type="text" value={inputIdValue} placeholder='id типа (число до 9 знаков)'/>
+              <input onChange={e => inputNameHandler(e)} type="text" value={inputNameValue} placeholder='Имя типа'/>
+              <input onChange={e => inputIdHandler(e)} type="text" value={inputIdValue} placeholder='id типа (число до 9 знаков)'/>
               <button disabled={disabled} onClick={(e) => addType(e)} type='button'>Добавить тип</button>
           </form>
     </div>

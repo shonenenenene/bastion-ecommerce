@@ -6,14 +6,6 @@ const ItemsList = () => {
   return (
     <div className='items_list'>
           <ItemsCard />
-          <ItemsCard /> 
-          <ItemsCard /> 
-          <ItemsCard /> 
-          <ItemsCard/>  
-          <ItemsCard/> 
-          <ItemsCard /> 
-          <ItemsCard /> 
-          <ItemsCard />  
     </div>
   )
 }

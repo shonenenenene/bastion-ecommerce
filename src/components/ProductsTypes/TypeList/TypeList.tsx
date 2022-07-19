@@ -10,8 +10,8 @@ const TypeList: FC = () => {
 
   return (
     <div className='type-list'>
-      {productTypes.map((el) => {
-        return <TypeItem key={el.typeId} typeId={el.typeId} typeName={el.typeName} />
+      {productTypes.map((e) => {
+        return <TypeItem key={e.typeId} typeId={e.typeId} typeName={e.typeName} />
       }) }
     </div>
   )
