@@ -1,14 +1,17 @@
 import React, { FC } from 'react'
 import TypeItem from '../TypeItem/TypeItem'
-import { typesData } from '../../../data'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import './style.scss'
 
-const TypeList:FC = () => {
+const TypeList: FC = () => {
+  
+  const productTypes = useTypedSelector(state => state.typesReducer.productTypes)
+  console.log(productTypes)
 
   return (
     <div className='type-list'>
-      {typesData.productTypes.map((el) => {
-        return <TypeItem typeId={el.typeId} typeName={el.typeName} />
+      {productTypes.map((el) => {
+        return <TypeItem key={el.typeId} typeId={el.typeId} typeName={el.typeName} />
       }) }
     </div>
   )
