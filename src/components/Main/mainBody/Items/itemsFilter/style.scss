@@ -5,15 +5,24 @@
     border: 1px solid #E6E6E6;
     min-height: 60px;
     div {
-        margin: 15px 5px 15px 15px;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 14px;
-        text-align: center;
-        letter-spacing: 0.009em;
-        border-radius: 4px;
-        padding: 5px;
-        background-color: $coral;
-        color: white;
+        a {
+            margin: 15px 5px 15px 15px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            letter-spacing: 0.009em;
+            border-radius: 4px;
+            padding: 5px;
+            background-color: white;
+            color: $coral;
+            border: 1px solid $coral;
+            transition: 0.3s;
+            &:hover {
+                background-color: $coral;
+                color: white;
+                cursor: pointer;
+            }
+        }
     }
 }

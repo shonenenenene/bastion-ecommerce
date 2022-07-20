@@ -1,7 +1,8 @@
 import React from 'react'
+import { IProduct } from '../../../../../types'
 import './style.scss'
 
-const ItemsCard = () => {
+const ItemsCard = ({productName, price, standart}: IProduct) => {
   return (
     <div className='items_card'>
           <div className='bonuses'>
@@ -12,9 +13,9 @@ const ItemsCard = () => {
           <div className='card-img'>
             <img src='./img/woman.png'/> 
           </div>
-          <div className='standart'>gdf-5343g</div>
-          <h3>Опора тавровая хомутовая ТХ</h3>
-          <p className='item-price'>777</p>
+          <div className='standart'>{standart}</div>
+          <h3>{productName}</h3>
+          <p className='item-price'>{price} руб.</p>
     </div>
   )
 }

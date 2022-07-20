@@ -58,6 +58,7 @@ const AddProduct = () => {
       || inputProductId.length > 9
       || !re.test(String(inputProductId))
       || !re.test(String(inputProductPrice))
+      || products.find(item => item.standart === inputProductStandart)
       || products.find(item => item.productId === +inputProductId)) {
       setDisabled(true)
     } else setDisabled(false)

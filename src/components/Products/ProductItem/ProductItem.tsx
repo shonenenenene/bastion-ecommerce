@@ -8,7 +8,7 @@ const ProductItem = ({ typeName, productId, productName, price, standart }: IPro
       <div className='item-id'>{ productId }</div>
       <div className='item-name'>{ productName }</div>
       <div className='item-type'>{ typeName }</div>
-      <div className='item-price'>{ price }</div>
+      <div className='item-price'>{ price } руб.</div>
       <div className='item-standart'>{ standart }</div>
     </div>
   )
