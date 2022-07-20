@@ -1,6 +1,6 @@
 import { typesData } from '../data'
 import { ITypesState } from '../types'
-import { productsData } from '../data'
+import { productsData, currentData } from '../data'
 import { IProductsState } from '../types'
 import { IUserAction } from '../types'
 import { TypeActions } from './actions'
@@ -19,6 +19,15 @@ export const typesReducer = (state = typesData, action: IUserAction): ITypesStat
 export const productsReducer = (state = productsData, action: IUserAction): IProductsState => {
     switch (action.type) {
         case TypeActions.ADD_PRODUCT:
+            return { ...state, products: [...state.products, action.payload]}
+        default:
+            return state
+    }
+}
+
+export const currentItemsReducer = (state = currentData, action: IUserAction): IProductsState => {
+        switch (action.type) {
+        case TypeActions.SET_STANDART_FILTER:
             return { ...state, products: [...state.products, action.payload]}
         default:
             return state

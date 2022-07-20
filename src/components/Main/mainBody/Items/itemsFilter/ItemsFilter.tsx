@@ -1,22 +1,29 @@
-import React from 'react'
-import { IProduct, IProductsState} from '../../../../../types'
+import React, { FC, useState } from 'react'
+import { IProduct, IProductsState } from '../../../../../types'
+import { useTypedSelector } from '../../../../hooks/useTypedSelector'
 import './style.scss'
 
-const ItemsFilter = ({ currentList, setCurrentList }: any) => {
+const ItemsFilter:FC = () => {
 
-  const standartFilter = (e: React.MouseEvent) => {
-    e.preventDefault()
-    const filtered = currentList.filter((el: IProduct) => el.standart === el.standart)
-    setCurrentList(filtered)
-    console.log(filtered)
+  const items = useTypedSelector(state => state.currentItemsReducer.products)
+  const [checked, setChecked] = useState(
+    new Array(items.length).fill(false)
+  )
+
+  const checkHandler = ( i:number): void => {
+    const updatedCheckedState = checked.map((item, index) =>
+      index === i ? !item : item
+    )
+    setChecked(updatedCheckedState);
   }
+
 
   return (
     <div className='items_filter'>
       
-    {currentList.map((e:IProduct) => {
-      return <label key={e.productId}>
-        <input type='checkbox' id={e.standart} />
+      {items.map((e, i) => {
+      return <label key={e.standart}>
+        <input type='checkbox' onChange={(e) => checkHandler(i)} name={i.toString()}  checked={checked[i]}  />
         <span>{e.standart}</span>
       </label>
       

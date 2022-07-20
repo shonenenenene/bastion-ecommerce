@@ -9,6 +9,7 @@ const AddProduct = () => {
   const dispatch = useDispatch()
   const products = useTypedSelector(state => state.productsReducer.products)
   const productTypes = useTypedSelector(state => state.typesReducer.productTypes)
+  const currentItems = useTypedSelector(state => state.currentItemsReducer.products)
 
   const [inputProductId, setInputProductId] = useState('')
   const [inputProductName, setInputProductName] = useState('')
@@ -19,7 +20,8 @@ const AddProduct = () => {
 
   const addProduct = (e: React.MouseEvent) => {
     e.preventDefault()
-    dispatch({ type: TypeActions.ADD_PRODUCT, payload: { typeName: select, productId: +inputProductId, productName: inputProductName, price: +inputProductPrice, standart: inputProductStandart } })
+    dispatch({ type: TypeActions.ADD_PRODUCT, payload: { typeName: select, productId: +inputProductId, productName: inputProductName, price: +inputProductPrice, standart: inputProductStandart.toUpperCase() } })
+    dispatch({ type: TypeActions.SET_STANDART_FILTER, payload: { typeName: select, productId: +inputProductId, productName: inputProductName, price: +inputProductPrice, standart: inputProductStandart.toUpperCase() } })
     setInputProductId('')
     setInputProductName('')
     setInputProductPrice('')
@@ -77,7 +79,7 @@ const AddProduct = () => {
               } )}     
               </select>
               <input onChange={e => inputPriceHandler(e)} type="text" className='price' placeholder='Цена' value={ inputProductPrice }/>
-              <input onChange={e => inputStandartHandler(e)} className='standart' placeholder='ГОСТ' value={ inputProductStandart.toUpperCase() }/>
+              <input onChange={e => inputStandartHandler(e)} className='standart' placeholder='ГОСТ' value={ inputProductStandart }/>
               <button disabled={disabled} onClick={(e) => addProduct(e)} type='button' className='add-product-btn'>Добавить продукт</button>
           </form>
     </div>
