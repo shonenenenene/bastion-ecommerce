@@ -12,6 +12,14 @@ export const productsData: IProductsState = {
             price: 777,
             standart: 'RTEB-583',
         },
+        {
+            typeId: 2,
+            typeName: 'weapons',
+            productId: 333,
+            productName: 'sword',
+            price: 777,
+            standart: 'YUYUY-53',
+        },
     ]
 
 }
@@ -26,7 +34,7 @@ export const typesData: ITypesState = {
         },
         {
             typeId: 2,
-            typeName: 'weapon',
+            typeName: 'weapons',
         },
     ]
 

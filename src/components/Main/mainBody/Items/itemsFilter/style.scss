@@ -4,25 +4,33 @@
     @include flex (flex-start, center);
     border: 1px solid #E6E6E6;
     min-height: 60px;
-    div {
-        a {
-            margin: 15px 5px 15px 15px;
+    label {
+            margin: 5px;
+            input:checked + span {
+                color: white;
+                background-color: $coral;
+            }
+            input {
+                    display: none;
+                    &:checked {
+                        background-color: $coral !important;
+                    }
+            }
+            span {
+                	display: inline-block;
+                    cursor: pointer;
+                    padding: 5px 10px;
+                    border-radius: 4px;
+            }
+            user-select: none;
             font-weight: 400;
             font-size: 12px;
             line-height: 14px;
             text-align: center;
             letter-spacing: 0.009em;
             border-radius: 4px;
-            padding: 5px;
-            background-color: white;
+            background-color: #f7f3f3;
             color: $coral;
-            border: 1px solid $coral;
             transition: 0.3s;
-            &:hover {
-                background-color: $coral;
-                color: white;
-                cursor: pointer;
-            }
-        }
     }
 }

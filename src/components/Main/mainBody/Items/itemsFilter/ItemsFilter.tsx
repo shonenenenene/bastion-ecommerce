@@ -1,16 +1,25 @@
 import React from 'react'
-import { useTypedSelector } from '../../../../hooks/useTypedSelector'
+import { IProduct, IProductsState} from '../../../../../types'
 import './style.scss'
 
-const ItemsFilter = () => {
+const ItemsFilter = ({ currentList, setCurrentList }: any) => {
 
-  const standarts = useTypedSelector(state => state.productsReducer.products)
+  const standartFilter = (e: React.MouseEvent) => {
+    e.preventDefault()
+    const filtered = currentList.filter((el: IProduct) => el.standart === el.standart)
+    setCurrentList(filtered)
+    console.log(filtered)
+  }
 
   return (
     <div className='items_filter'>
       
-    {standarts.map((e) => {
-      return <div key={e.productId}><a>{ e.standart }</a></div>
+    {currentList.map((e:IProduct) => {
+      return <label key={e.productId}>
+        <input type='checkbox' id={e.standart} />
+        <span>{e.standart}</span>
+      </label>
+      
     })}
           
     </div>
