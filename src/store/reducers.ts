@@ -32,7 +32,12 @@ export const cartReducer = (state = currentCart, action: IUserAction): ICartStat
                 return { ...state, products: [...state.products, action.payload] }
             case TypeActions.DELETE_FROM_CART:
                 return {
-                    ...state, products: state.products.filter((e) => e.productId !== action.payload.productId ) }
+                    ...state, products: state.products.filter((e) => e.productId !== action.payload.productId)
+                }
+            case TypeActions.CLEAR_SKY:
+                return {
+                    ...state, products: currentCart.products
+                }
             case TypeActions.COUNT_CHANGE:
                 return {
                     ...state, products: state.products.map((e) => {

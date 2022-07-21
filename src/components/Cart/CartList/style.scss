@@ -1,5 +1,15 @@
 @import "../../App/style.scss";
 
+.empty {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    font-size: 30px;
+    font-weight: 600;
+    color: $coral;
+}
+
+
 .cart-list-footer {
     @include flex(flex-end, center);
     height: 85px;

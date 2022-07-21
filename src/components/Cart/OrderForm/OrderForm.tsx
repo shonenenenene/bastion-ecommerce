@@ -1,7 +1,12 @@
 import React, { FC } from 'react'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import './style.scss'
 
-const OrderForm:FC = () => {
+const OrderForm: FC = () => {
+
+  const currentCart = useTypedSelector(state => state.cartReducer.products)
+  const sum = currentCart.map((e) => {return e.price * e.count}).reduce((prev, curr) => prev + curr, 0)
+  
   return (
     <div className='order-form'>
       <h3>Заказ</h3>
@@ -16,7 +21,7 @@ const OrderForm:FC = () => {
         <div className='order-total'>
           <div className='result'>
             <p>Итого</p>
-            <div className='order-total-price'>777000</div>
+            <div className='order-total-price'>{sum} руб.</div>
           </div>
           <button>Оформить заказ</button>
           <div className='order-offer'>Коммерческое предложение</div>

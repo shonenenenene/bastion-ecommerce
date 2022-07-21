@@ -23,7 +23,7 @@ const CartItem = ({ item}: any) => {
   }
 
   const deleteItem = () => {
-    dispatch({ type: TypeActions.DELETE_FROM_CART, payload: { productId,  } })
+    dispatch({ type: TypeActions.DELETE_FROM_CART, payload: { productId } })
   }
 
   // useEffect(() => {
