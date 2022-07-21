@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux'; 
-import {typesReducer, productsReducer, currentItemsReducer } from './reducers';
+import {typesReducer, productsReducer, currentItemsReducer} from './reducers';
 
 
 

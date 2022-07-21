@@ -21,7 +21,6 @@ const AddProduct = () => {
   const addProduct = (e: React.MouseEvent) => {
     e.preventDefault()
     dispatch({ type: TypeActions.ADD_PRODUCT, payload: { typeName: select, productId: +inputProductId, productName: inputProductName, price: +inputProductPrice, standart: inputProductStandart.toUpperCase() } })
-    dispatch({ type: TypeActions.SET_STANDART_FILTER, payload: { typeName: select, productId: +inputProductId, productName: inputProductName, price: +inputProductPrice, standart: inputProductStandart.toUpperCase() } })
     setInputProductId('')
     setInputProductName('')
     setInputProductPrice('')
@@ -60,7 +59,6 @@ const AddProduct = () => {
       || inputProductId.length > 9
       || !re.test(String(inputProductId))
       || !re.test(String(inputProductPrice))
-      || products.find(item => item.standart === inputProductStandart)
       || products.find(item => item.productId === +inputProductId)) {
       setDisabled(true)
     } else setDisabled(false)

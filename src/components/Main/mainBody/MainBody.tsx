@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { FC, useState } from 'react'
 import Filter from './Filter/Filter'
 import Items from './Items/Items'
 import './style.scss'
 
-const MainBody = () => {
+const MainBody:FC = () => {
+
   return (
     <div className='main__body'>
           <div className='main__body_container container'>

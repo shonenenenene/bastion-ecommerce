@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IProduct } from '../../../../../types'
 import './style.scss'
 
-const ItemsCard = ({productName, price, standart}: IProduct) => {
+const ItemsCard = ({ productName, price, standart }: IProduct) => {
+  const [mouseOn, setMouseOn] = useState(false)
+
   return (
-    <div className='items_card'>
+    <div
+      onMouseEnter={() => setMouseOn(true)}
+      onMouseLeave={() => setMouseOn(false)}
+      className={`items_card ${mouseOn && 'mouse'}`}>
           <div className='bonuses'>
               <div className='hit'>хит</div>
               <div className='sale'>скидка</div>

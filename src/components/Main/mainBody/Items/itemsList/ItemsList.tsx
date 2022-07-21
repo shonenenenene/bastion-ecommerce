@@ -4,13 +4,13 @@ import ItemsCard from '../itemsCard/ItemsCard'
 import { useTypedSelector } from '../../../../hooks/useTypedSelector'
 import './style.scss'
 
-const ItemsList:FC = () => {
+const ItemsList = ({items, setItems}: any) => {
 
-  const itemCards = useTypedSelector(state => state.currentItemsReducer.products)
+  
 
   return (
     <div className='items_list'>
-        {itemCards.map((e) => {
+        {items.map((e: IProduct) => {
         return <ItemsCard key={e.productId} typeName={e.typeName} productId={e.productId} productName={e.productName} price={e.price} standart={ e.standart } />
       }) }
     </div>
