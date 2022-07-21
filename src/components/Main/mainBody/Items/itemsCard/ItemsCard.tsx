@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { TypeActions } from '../../../../../store/actions'
 import { IProduct } from '../../../../../types'
@@ -11,6 +11,7 @@ const ItemsCard = ({ typeId, typeName, productId, productName, price, standart }
   const dispatch = useDispatch()
 
   const [count, setCount] = useState(1)
+  const [alreadyInCart, setAlreadyInCart] = useState(false)
 
   const addToCart = () => {
     dispatch({type: TypeActions.ADD_TO_CART, payload: { typeName: typeName, productId: productId, productName: productName, price: price, standart: standart, count: +count }})
@@ -28,6 +29,13 @@ const ItemsCard = ({ typeId, typeName, productId, productName, price, standart }
   const countDown = () => {
     if (count > 1) setCount(count - 1)
   }
+
+
+  useEffect(() => {
+    if (cartItems.find(item => item.productId === productId)) {
+      setAlreadyInCart(true)
+    }
+  }, [mouseOn, addToCart])
 
   return (
     <div
@@ -47,11 +55,15 @@ const ItemsCard = ({ typeId, typeName, productId, productName, price, standart }
           <p className='item-price'>{price} руб.</p>
           {mouseOn &&
           <div className='mouse-on'>
-          <button onClick={() => addToCart()} className='add-to-cart' type='button'>В корзину</button>
+          <button onClick={() => addToCart()} disabled={alreadyInCart} className='add-to-cart' type='button'>
+          { !alreadyInCart ?
+              'В корзину' :
+              'Добавлено'
+          }</button>
             <div className='item-counter'>
-              <button onClick={() => countUp()} type='button' className='count-btn'>+</button>
-            <input onChange={(e) => valueChanger(e)} type='number' value={ +count } min='1' max='99'/>
-              <button onClick={() => countDown()} type='button' className='count-btn'>-</button>
+              <button onClick={() => countUp()} disabled={alreadyInCart} type='button' className='count-btn'>+</button>
+            <input onChange={(e) => valueChanger(e)} disabled={alreadyInCart} type='number' value={ +count } min='1' max='99'/>
+              <button onClick={() => countDown()} disabled={alreadyInCart} type='button' className='count-btn'>-</button>
             </div>
           </div> 
           }

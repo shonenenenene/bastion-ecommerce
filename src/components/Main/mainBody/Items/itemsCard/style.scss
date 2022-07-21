@@ -94,6 +94,9 @@
             * {
             outline: 1px solid #e6e6e6;
             height: 30px;
+            &:disabled {
+                background: rgba($color: gray, $alpha: 0.1);
+            }
             }
             .count-btn {
             width: 28px;
@@ -127,6 +130,10 @@
             }
             &:active {
                 background: red;
+            }
+            &:disabled {
+                background: rgba(128, 128, 128, 0.603);
+                cursor: default;
             }
         }
     }

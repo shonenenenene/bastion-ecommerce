@@ -80,13 +80,16 @@
             margin-left:auto;
             display: flex;
             align-items: flex-end;
-            a {
+            .link {
+                text-decoration: none;
+                color: inherit;
+            }
+            button {
                 height: 45px;
                 width: 63px;
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
-                text-decoration: none;
                 color: inherit;
                 border-radius: 10px;
                 transition: 0.3s;
