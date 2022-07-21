@@ -1,12 +1,12 @@
 import { createStore, combineReducers } from 'redux'; 
-import {typesReducer, productsReducer, currentItemsReducer} from './reducers';
+import {typesReducer, productsReducer, cartReducer} from './reducers';
 
 
 
 const rootReducer = combineReducers({
     typesReducer: typesReducer,
     productsReducer: productsReducer,
-    currentItemsReducer: currentItemsReducer,
+    cartReducer: cartReducer,
 })
 
 export type RootState = ReturnType<typeof rootReducer>

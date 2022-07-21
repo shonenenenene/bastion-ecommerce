@@ -18,6 +18,16 @@ export interface IProductsState {
     products: IProduct[]
 }
 
+export interface ICartItem extends IProduct {
+    count: number
+}
+
+
+
+export interface ICartState {
+    products: ICartItem[]
+}
+
 export interface IUserAction {
     type: string
     payload?: any;

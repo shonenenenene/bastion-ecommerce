@@ -1,9 +1,10 @@
 import { typesData } from '../data'
-import { ITypesState } from '../types'
+import { ICartState, ITypesState } from '../types'
 import { productsData, currentCart } from '../data'
 import { IProductsState } from '../types'
 import { IUserAction } from '../types'
 import { TypeActions } from './actions'
+
 
 
 
@@ -25,10 +26,14 @@ export const productsReducer = (state = productsData, action: IUserAction): IPro
     }
 }
 
-export const currentItemsReducer = (state = currentCart, action: IUserAction): IProductsState => {
+export const cartReducer = (state = currentCart, action: IUserAction): ICartState => {
         switch (action.type) {
-        case TypeActions.ADD_TO_CART:
-            return { ...state, products: [...state.products, action.payload] }
+            case TypeActions.ADD_TO_CART:
+                return { ...state, products: [...state.products, action.payload] }
+            case TypeActions.COUNT_UP:
+                return { ...state, products: action.payload }
+            case TypeActions.COUNT_DOWN:
+                return { ...state, products: action.payload }
         default:
             return state
     }

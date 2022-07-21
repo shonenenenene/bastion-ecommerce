@@ -9,7 +9,7 @@ const AddProduct = () => {
   const dispatch = useDispatch()
   const products = useTypedSelector(state => state.productsReducer.products)
   const productTypes = useTypedSelector(state => state.typesReducer.productTypes)
-  const currentItems = useTypedSelector(state => state.currentItemsReducer.products)
+  
 
   const [inputProductId, setInputProductId] = useState('')
   const [inputProductName, setInputProductName] = useState('')

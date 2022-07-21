@@ -1,4 +1,4 @@
-import { IProductsState } from './types'
+import { ICartState, IProductsState } from './types'
 import { ITypesState } from './types'
 
 export const productsData: IProductsState = {
@@ -23,10 +23,19 @@ export const productsData: IProductsState = {
     ]
 
 }
-export const currentCart: IProductsState = {
-        products: []
+export const currentCart: ICartState = {
+    products: [
+        {
+            typeId: 1,
+            typeName: 'plants',
+            productId: 34,
+            productName: 'rose',
+            price: 777,
+            standart: 'RTEB-583',
+            count: 1
+        },
+    ],
 }
-
 
 export const typesData: ITypesState = {
 
@@ -42,4 +51,5 @@ export const typesData: ITypesState = {
     ]
 
 }
+
 

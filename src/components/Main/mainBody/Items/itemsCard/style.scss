@@ -2,10 +2,10 @@
 
 .items_card {
     border: 1px solid #e6e6e6;
-    @include flex (space-between, flex-start);
+    @include flex (flex-start, flex-start);
     flex-direction: column;
-    height: 425px;
-    max-width: 280px;
+    min-height: 425px;
+    width: 280px;
     padding: 20px;
     .bonuses {
         @include flex (flex-start, center);
@@ -16,6 +16,7 @@
         line-height: 12px;
         text-align: center;
         letter-spacing: 0.009em;
+        margin-bottom: 25px;
         div {
             margin-right: 5px;
         }
@@ -39,6 +40,7 @@
         width: 180px;
         height: auto;
         align-self: center;
+        margin-bottom: 25px;
     }
     .standart {
         font-weight: 400;
@@ -50,21 +52,83 @@
         background: rgba($color: $coral, $alpha: 0.1);
         border-radius: 2px;
         padding: 4px 6px;
+        margin-bottom: 25px;
     }
     h3 {
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
         letter-spacing: 0.009em;
+        margin-bottom: 20px;
     }
     .item-price {
         font-weight: 700;
         font-size: 15px;
         line-height: 18px;
         letter-spacing: 0.009em;
+        margin-bottom: 20px;
     }
 }
 
 .mouse {
-    background-color: #27AE60;
+    transition: 0.3s;
+    position: relative;
+    box-shadow: 0px 12px 12px 4px rgba(0, 0, 0, 0.1);
+    .mouse-on {
+        position: absolute;
+        border: 1px solid #e6e6e6;
+        border-top: none;
+        bottom: -60px;
+        background: white;
+        width: 280px;
+        transition: 0.3s;
+        box-shadow: 0px 12px 12px 4px rgba(0, 0, 0, 0.1);
+        left: -1px;
+        
+        .item-counter {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            margin-left: 30px;
+            * {
+            outline: 1px solid #e6e6e6;
+            height: 30px;
+            }
+            .count-btn {
+            width: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            input {
+            width: 50px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.009em;
+            text-align: center;
+            }
+        }
+        .add-to-cart {
+            margin-left: 20px;
+            background: $coral;
+            border-radius: 4px;
+            color: white;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.009em;
+            padding: 8px 15px;
+            transition: 0.1s;
+            &:hover {
+                background: rgba($color: $coral, $alpha: 0.8);
+                
+            }
+            &:active {
+                background: red;
+            }
+        }
+    }
+    
 }
