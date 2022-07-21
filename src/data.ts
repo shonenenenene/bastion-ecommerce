@@ -25,15 +25,15 @@ export const productsData: IProductsState = {
 }
 export const currentCart: ICartState = {
     products: [
-        {
-            typeId: 1,
-            typeName: 'plants',
-            productId: 34,
-            productName: 'rose',
-            price: 777,
-            standart: 'RTEB-583',
-            count: 1
-        },
+        // {
+        //     typeId: 1,
+        //     typeName: 'plants',
+        //     productId: 34,
+        //     productName: 'rose',
+        //     price: 777,
+        //     standart: 'RTEB-583',
+        //     count: 1,
+        // },
     ],
 }
 

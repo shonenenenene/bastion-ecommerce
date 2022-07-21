@@ -1,12 +1,11 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import CartItem from '../CartItem/CartItem'
 import './style.scss'
 
-const CartList:FC = () => {
+const CartList = () => {
   const cartItems = useTypedSelector(state => state.cartReducer.products)
   
-  console.log(cartItems)
   return (
     <div>
       <div className='cart-list'>

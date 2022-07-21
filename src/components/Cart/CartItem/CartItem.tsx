@@ -1,23 +1,35 @@
-import React, { FC, useState } from 'react'
-import { ICartItem, IProduct } from '../../../types'
+import React, { FC, useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { TypeActions } from '../../../store/actions'
 import './style.scss'
 
-const CartItem = ({ item }: any) => {
+const CartItem = ({ item}: any) => {
 
-  const [cartCount, setCartCount] = useState(item.count)
+  const dispatch = useDispatch()
+  const count = item.count
+  const productId = item.productId
 
-  const valueChanger = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setCartCount(+e.target.value)
-  }
 
   const countUp = () => {
-    if (cartCount < 99) setCartCount(cartCount + 1)
-    
+    if (count < 99) {
+      dispatch({ type: TypeActions.COUNT_CHANGE, payload: { productId, count: count + 1 } })
+    }
   }
 
   const countDown = () => {
-    if (cartCount > 1) setCartCount(cartCount - 1)
+    if (count > 1) dispatch({type: TypeActions.COUNT_CHANGE, payload: {productId, count: +count - 1}})
+
   }
+
+  const deleteItem = () => {
+    dispatch({ type: TypeActions.DELETE_FROM_CART, payload: { productId,  } })
+  }
+
+  // useEffect(() => {
+  //   setCartItemTotal(item.price * cartCount)
+  // }, [cartCount])
+
 
   return (
     <div className='cart-item'>
@@ -31,11 +43,11 @@ const CartItem = ({ item }: any) => {
           </div>
           <div className='cart-item-counter'>
               <button onClick={() => countUp()} className='counter-up'>+</button>
-                <input onChange={(e) => valueChanger(e)} type='number' min='1' max='99' value={cartCount } />
+                <div className='field'>{ count }</div>
               <button onClick={() => countDown()} className='counter-down'>-</button>
           </div>
-          <div className='cart-item-total'>{ item.price } руб.</div>
-          <button type='button' className='cart-item-delete-btn'>
+          <div className='cart-item-total'>{ item.price * count} руб.</div>
+      <button onClick={() => deleteItem()} type='button' className='cart-item-delete-btn'>
             <img src='./img/trash.svg'/>
           </button>
     </div>

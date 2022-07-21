@@ -30,13 +30,26 @@ export const cartReducer = (state = currentCart, action: IUserAction): ICartStat
         switch (action.type) {
             case TypeActions.ADD_TO_CART:
                 return { ...state, products: [...state.products, action.payload] }
-            case TypeActions.COUNT_UP:
-                return { ...state, products: action.payload }
-            case TypeActions.COUNT_DOWN:
-                return { ...state, products: action.payload }
+            case TypeActions.DELETE_FROM_CART:
+                return {
+                    ...state, products: state.products.filter((e) => e.productId !== action.payload.productId ) }
+            case TypeActions.COUNT_CHANGE:
+                return {
+                    ...state, products: state.products.map((e) => {
+                        if (e.productId === action.payload.productId) {
+                            e.count = action.payload.count
+                        }
+                        return e
+                    })
+                }
+
         default:
             return state
     }
 }
 
+// state.products.map((e) => {
+//                         if (e.productId === action.payload.productId) e.count = action.payload.count
+//                         return e
+//                     })
 

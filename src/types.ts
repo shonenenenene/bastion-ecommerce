@@ -20,6 +20,7 @@ export interface IProductsState {
 
 export interface ICartItem extends IProduct {
     count: number
+    totalPrice?: number
 }
 
 

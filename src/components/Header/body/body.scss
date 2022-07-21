@@ -93,10 +93,6 @@
                 color: inherit;
                 border-radius: 10px;
                 transition: 0.3s;
-                &:hover {
-                    color: $coral;
-                    background-color: rgba($color: rgb(177, 177, 177), $alpha: 0.1);
-                }
             }
             .fav {
                 margin-right: 10px;
@@ -114,6 +110,10 @@
             }
             .cart {
                 position: relative;
+                    &:hover {
+                    color: $coral;
+                    background-color: rgba($color: rgb(177, 177, 177), $alpha: 0.1);
+                }
                 &::before {
                     position: absolute;
                     left: 20px;
@@ -123,6 +123,24 @@
                     width: 19px;
                     height: 18px;
                     background-image: url("./../../../../public/img/cart.png");
+                }
+                .cart-counter {
+                    position: absolute;
+                    z-index: 999;
+                    top: -5px;
+                    right: 2px;
+                    width: 17px;
+                    height: 17px;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    background-color: $coral;
+                    font-size: 10px;
+                    font-weight: 600;
+                    color: white;
+                    padding-top: 1px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
             font-weight: 300;
