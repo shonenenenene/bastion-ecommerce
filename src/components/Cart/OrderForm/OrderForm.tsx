@@ -50,7 +50,13 @@ const OrderForm: FC = () => {
       setDisabled(true)
       } else setDisabled(false)
 
-  },[mail, phone, userName, org])
+  }, [mail, phone, userName, org])
+  
+  const order = () => {
+    currentCart.forEach((e) => console.log(`Товар: ${e.productName} в количестве: ${e.count} шт. на сумму: ${e.price * e.count} руб.`))
+    console.log(`Итого: ${sum} руб.`)
+    console.log(`Клиент: ${userName}. Номер телефона клиента: ${phone}, почта клиента: ${mail}, ООО ${org}`)
+  } 
   
   return (
     <div className='order-form'>
@@ -68,7 +74,7 @@ const OrderForm: FC = () => {
             <p>Итого</p>
             <div className='order-total-price'>{sum} руб.</div>
           </div>
-          <button disabled={disabled} type='button'>Оформить заказ</button>
+          <button disabled={disabled} onClick={() => order()} type='button'>Оформить заказ</button>
           <div className='order-offer'>Коммерческое предложение</div>
         </div>
       </form>

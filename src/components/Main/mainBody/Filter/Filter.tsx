@@ -5,24 +5,31 @@ import { useTypedSelector } from '../../../hooks/useTypedSelector';
 import { IProduct } from '../../../../types';
 
 const Filter = ({items, setItems}: any) => {
-
+  const productList = useTypedSelector(state => state.productsReducer.products)
   const [minInput, setMinInput] = useState(0)
   const [maxInput, setMaxInput] = useState(99999)
-  const [select, setSelect] = useState('default')
+
+  const [currList, setCurrList] = useState(items)
+
   const [value, setValue] = React.useState<number[]>([7777, 70000]);
 
   const handleChange = (event: Event, newValue: number | number[]) => {
     setValue(newValue as number[]);
     setMinInput(value[0])
     setMaxInput(value[1])
+    setItems(currList.filter((item: IProduct) => item.price < maxInput && item.price > minInput))
   };
 
   const selectHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelect(e.target.value)
     setItems(items.filter((item: IProduct) => item.typeName === e.target.value))
-    
   }
 
+  const cancelFilters = () => {
+    setItems(productList)
+  }
+
+  const filtered: IProduct[] = Object.values(items.reduce((acc: IProduct, cur: IProduct) => Object.assign(acc, { [cur.typeName]: cur }), {}))
+  
   return (
     <div className='filter'>
           <div className='categ_title'>
@@ -48,15 +55,15 @@ const Filter = ({items, setItems}: any) => {
           </div>
           <div className='filter_type'>
               <span className='span'>Тип продукта</span>
-              <select onChange={e => selectHandler(e)} className='select-type' value={select}>
-              <option selected disabled value='default'>Выберите тип</option>
-              {items.map((e: IProduct) => {
+              <select onChange={e => selectHandler(e)} className='select-type' defaultValue={'default'} >
+              <option disabled value='default'>Выберите тип</option>
+              {filtered.map((e: IProduct) => {
                 return <option key={e.typeId} value={e.typeName}>{ e.typeName }</option>
               })}
               </select>
            </div>
             <div className='cancel-filters'>
-              <button className='cancel-filters-btn' type='button'>Сбросить фильтры</button>
+              <button onClick={() => cancelFilters()} className='cancel-filters-btn' type='button'>Сбросить фильтры</button>
             </div> 
     </div>
   )

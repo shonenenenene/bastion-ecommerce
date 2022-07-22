@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { TypeActions } from '../../../store/actions'
 import './style.scss'
 
-const AddProduct = () => {
+const AddProduct: FC = () => {
 
   const dispatch = useDispatch()
   const products = useTypedSelector(state => state.productsReducer.products)
@@ -30,7 +30,8 @@ const AddProduct = () => {
   
 
   const inputIdHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputProductId(e.target.value)
+    const re = /^\d+(-\d+)*$/
+    if ((re.test(String(e.target.value)) || e.target.value === '') && (e.target.value).toString().length <= 9) setInputProductId(e.target.value)
   }
 
   const inputNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,7 +39,10 @@ const AddProduct = () => {
   }
 
    const inputPriceHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputProductPrice(e.target.value)
+
+    const re = /^\d+(-\d+)*$/
+    if ((re.test(String(e.target.value)) || e.target.value === '') && (e.target.value).toString().length <= 5) setInputProductPrice(e.target.value)
+     
   }
 
    const inputStandartHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,10 +58,8 @@ const AddProduct = () => {
     if (inputProductId == ('')
       || inputProductName == ('')
       || inputProductPrice == ('')
-      || inputProductPrice.length > 5
       || inputProductStandart == ('')
       || select == ('default')
-      || inputProductId.length > 9
       || !re.test(String(inputProductId))
       || !re.test(String(inputProductPrice))
       || products.find(item => item.productId === +inputProductId)) {
@@ -71,13 +73,13 @@ const AddProduct = () => {
           <form>
               <input onChange={e => inputIdHandler(e)} type="text" className='product-id' placeholder='id(число до 9 знаков)' value={ inputProductId } />
               <input onChange={e => inputNameHandler(e)} className='product-name' placeholder='Название' value={ inputProductName }/>
-              <select onChange={e => selectHandler(e)} className='select-type' value={select}>
-              <option selected disabled value='default'>Выберите тип</option>
+              <select onChange={e => selectHandler(e)} className='select-type' defaultValue='default'>
+              <option disabled value='default'>Выберите тип</option>
               {productTypes.map((e) => {
                 return <option key={e.typeId} value={e.typeName}>{ e.typeName }</option>
               } )}     
               </select>
-              <input onChange={e => inputPriceHandler(e)} type="text" className='price' placeholder='Цена' value={ inputProductPrice }/>
+              <input onChange={e => inputPriceHandler(e)} type="text" className='price' placeholder='Цена (до 99999)' value={ inputProductPrice }/>
               <input onChange={e => inputStandartHandler(e)} className='standart' placeholder='ГОСТ' value={ inputProductStandart }/>
               <button disabled={disabled} onClick={(e) => addProduct(e)} type='button' className='add-product-btn'>Добавить продукт</button>
           </form>

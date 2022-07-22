@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { TypeActions } from '../../../store/actions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import './style.scss'
 
-const AddType = () => {
+const AddType:FC = () => {
   const dispatch = useDispatch()
   const [inputNameValue, setInputNameValue] = useState('')
   const [inputIdValue, setInputIdValue] = useState('')
@@ -23,12 +23,14 @@ const AddType = () => {
   }
 
   const inputIdHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputIdValue(e.target.value)
+    const re = /^\d+(-\d+)*$/
+    if ((re.test(String(e.target.value)) || e.target.value === '') && (e.target.value).toString().length <= 11) setInputIdValue(e.target.value)
+    
   }
 
   useEffect(() => {
       const re = /^\d+$/
-        if (inputNameValue === ('') || inputIdValue === ('') || !re.test( String( inputIdValue ) ) || productTypes.find(item => item.typeId === +inputIdValue || inputIdValue.length > 9)) {
+        if (inputNameValue === ('') || inputIdValue === ('') || !re.test( String( inputIdValue ) ) || productTypes.find(item => item.typeId === +inputIdValue) || productTypes.find(item => item.typeName === inputNameValue)) {
             setDisabled(true)
         } else {
           setDisabled(false)

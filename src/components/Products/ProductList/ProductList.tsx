@@ -6,7 +6,6 @@ import './style.scss'
 const ProductList: FC = () => {
   
   const products = useTypedSelector(state => state.productsReducer.products)
-  console.log(products)
   return (
     <div className='product-list'>
       {products.map((e) => {

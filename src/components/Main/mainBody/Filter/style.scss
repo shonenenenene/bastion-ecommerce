@@ -102,6 +102,7 @@
     .cancel-filters {
         @include flex (center, center);
         margin-top: 25px;
+        margin-bottom: 25px;
         font-weight: 400;
         font-size: 15px;
         line-height: 18px;
