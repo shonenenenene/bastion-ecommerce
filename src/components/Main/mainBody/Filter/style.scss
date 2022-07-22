@@ -1,4 +1,54 @@
+@import "../../../App/style.scss";
+
 .filter {
+    .filter_price {
+        padding: 0 30px;
+        background-color: white;
+        border-bottom: 1px solid #E6E6E6;
+        padding-bottom: 15px;
+        .span {
+            display: block;
+            margin: 15px 0;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.009em;
+            
+        };
+        .inputs {
+            margin-bottom: 15px;
+        }
+
+        .min, .max {
+            display: inline-block;
+            width: 70px;
+            height: 35px;
+            border: 1px solid #E6E6E6;
+            text-align: center;
+            
+        }
+        .min {
+           margin-right: 20px;
+        }
+
+    }
+    .filter_type {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 30px 30px;
+        .span {
+            margin: 15px 0;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.009em;
+        }
+        .select-type {
+            height: 30px;
+            border-radius: 10px;
+        }
+        border-bottom: 1px solid #E6E6E6;
+    }
     .filter_title {
         font-weight: 500;
         font-size: 18px;
@@ -47,6 +97,25 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
+        }
+    }
+    .cancel-filters {
+        @include flex (center, center);
+        margin-top: 25px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.009em;
+        .cancel-filters-btn {
+        padding: 15px;
+        border: 1px solid $coral;
+        color: $coral;
+        border-radius: 4px;
+        transition: 0.3s;
+        &:hover {
+            box-shadow: 0 0 5px 3px rgba($color: $coral, $alpha: 0.2);
+        }
         }
     }
 }

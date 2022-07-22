@@ -9,7 +9,7 @@ export const productsData: IProductsState = {
             typeName: 'plants',
             productId: 34,
             productName: 'rose',
-            price: 777,
+            price: 7777,
             standart: 'RTEB-583',
         },
         {
@@ -17,7 +17,7 @@ export const productsData: IProductsState = {
             typeName: 'weapons',
             productId: 333,
             productName: 'sword',
-            price: 777,
+            price: 88888,
             standart: 'YUYUY-53',
         },
     ]

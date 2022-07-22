@@ -4,9 +4,8 @@ import { useTypedSelector } from '../../../hooks/useTypedSelector'
 import ItemsList from './itemsList/ItemsList'
 import './style.scss'
 
-const Items:FC = () => {
-    const currItems = useTypedSelector(state => state.productsReducer.products)
-    const [items, setItems] = useState(currItems)
+const Items = ({items, setItems} :any) => {
+    
     return (
         <section>
             <ItemsFilter  items={items} setItems={setItems}/>

@@ -54,6 +54,7 @@ const AddProduct = () => {
     if (inputProductId == ('')
       || inputProductName == ('')
       || inputProductPrice == ('')
+      || inputProductPrice.length > 5
       || inputProductStandart == ('')
       || select == ('default')
       || inputProductId.length > 9

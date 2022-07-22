@@ -1,15 +1,19 @@
 import React, { FC, useState } from 'react'
 import Filter from './Filter/Filter'
 import Items from './Items/Items'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import './style.scss'
 
-const MainBody:FC = () => {
-
+const MainBody: FC = () => {
+  
+  const currItems = useTypedSelector(state => state.productsReducer.products)
+  const [items, setItems] = useState(currItems)
+  
   return (
     <div className='main__body'>
           <div className='main__body_container container'>
-              <Filter />
-              <Items />
+              <Filter items={items} setItems={setItems}/>
+              <Items items={items} setItems={setItems}/>
           </div>  
           <div className='description container'>
               <h3>Опоры трубопроводов от Бастион Груп - производитель металлических изделий №1</h3>
