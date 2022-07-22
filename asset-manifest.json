@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bastion-ecommerce/static/css/main.8b58d47c.css",
-    "main.js": "/bastion-ecommerce/static/js/main.e8535808.js",
+    "main.js": "/bastion-ecommerce/static/js/main.2a103f99.js",
     "static/media/woman.png": "/bastion-ecommerce/static/media/woman.2c057ab53f97f80ae914.png",
     "static/media/logo.svg": "/bastion-ecommerce/static/media/logo.ebab15e8c999974681d4.svg",
     "static/media/filter.svg": "/bastion-ecommerce/static/media/filter.3fc81ee09c0abf4f42a9.svg",
@@ -21,10 +21,10 @@
     "index.html": "/bastion-ecommerce/index.html",
     "static/media/rightarr.svg": "/bastion-ecommerce/static/media/rightarr.ceb935bae64a0e935b08.svg",
     "main.8b58d47c.css.map": "/bastion-ecommerce/static/css/main.8b58d47c.css.map",
-    "main.e8535808.js.map": "/bastion-ecommerce/static/js/main.e8535808.js.map"
+    "main.2a103f99.js.map": "/bastion-ecommerce/static/js/main.2a103f99.js.map"
   },
   "entrypoints": [
     "static/css/main.8b58d47c.css",
-    "static/js/main.e8535808.js"
+    "static/js/main.2a103f99.js"
   ]
 }
