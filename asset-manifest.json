@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/bastion-ecommerce/static/css/main.52e174be.css",
-    "main.js": "/bastion-ecommerce/static/js/main.c7f1b72f.js",
+    "main.css": "/bastion-ecommerce/static/css/main.8b58d47c.css",
+    "main.js": "/bastion-ecommerce/static/js/main.e8535808.js",
+    "static/media/woman.png": "/bastion-ecommerce/static/media/woman.2c057ab53f97f80ae914.png",
+    "static/media/logo.svg": "/bastion-ecommerce/static/media/logo.ebab15e8c999974681d4.svg",
     "static/media/filter.svg": "/bastion-ecommerce/static/media/filter.3fc81ee09c0abf4f42a9.svg",
     "static/media/cart-white.svg": "/bastion-ecommerce/static/media/cart-white.21a92a804ebfbc934c23.svg",
     "static/media/catalogred.svg": "/bastion-ecommerce/static/media/catalogred.0201c9865ec0d76665e1.svg",
@@ -13,15 +15,16 @@
     "static/media/briefcase.svg": "/bastion-ecommerce/static/media/briefcase.7959d1da5803620b8335.svg",
     "static/media/search.svg": "/bastion-ecommerce/static/media/search.38f2adff3c5889de6b37.svg",
     "static/media/enter.svg": "/bastion-ecommerce/static/media/enter.b6774b1d696544dc2d75.svg",
+    "static/media/trash.svg": "/bastion-ecommerce/static/media/trash.2994b57cfc7befe0115b.svg",
     "static/media/user.svg": "/bastion-ecommerce/static/media/user.dcd7cc720f55a4f9f5b6.svg",
     "static/media/backarr.svg": "/bastion-ecommerce/static/media/backarr.34566c7f61d1940779bb.svg",
     "index.html": "/bastion-ecommerce/index.html",
     "static/media/rightarr.svg": "/bastion-ecommerce/static/media/rightarr.ceb935bae64a0e935b08.svg",
-    "main.52e174be.css.map": "/bastion-ecommerce/static/css/main.52e174be.css.map",
-    "main.c7f1b72f.js.map": "/bastion-ecommerce/static/js/main.c7f1b72f.js.map"
+    "main.8b58d47c.css.map": "/bastion-ecommerce/static/css/main.8b58d47c.css.map",
+    "main.e8535808.js.map": "/bastion-ecommerce/static/js/main.e8535808.js.map"
   },
   "entrypoints": [
-    "static/css/main.52e174be.css",
-    "static/js/main.c7f1b72f.js"
+    "static/css/main.8b58d47c.css",
+    "static/js/main.e8535808.js"
   ]
 }
