@@ -10,6 +10,9 @@ const ItemsCard = ({ typeId, typeName, productId, productName, price, standart }
   const cartItems = useTypedSelector(state => state.cartReducer.products)
   const dispatch = useDispatch()
 
+  const [isHit, setIsHit] = useState(false)
+  const [isAct, setIsAct] = useState(false)
+
   const [count, setCount] = useState(1)
   const [alreadyInCart, setAlreadyInCart] = useState(false)
 
@@ -23,13 +26,18 @@ const ItemsCard = ({ typeId, typeName, productId, productName, price, standart }
 
   const countUp = () => {
     if (count < 99) setCount(count + 1)
-    
   }
 
   const countDown = () => {
     if (count > 1) setCount(count - 1)
   }
 
+  const funcAct = () => {
+  if (Array.from(productName).find((e) => 'a')) {
+    setIsAct(true)
+  }
+
+  }
 
   useEffect(() => {
     if (cartItems.find(item => item.productId === productId)) {
@@ -37,18 +45,17 @@ const ItemsCard = ({ typeId, typeName, productId, productName, price, standart }
     }
   }, [mouseOn, addToCart])
 
+
   return (
     <div
       onMouseEnter={() => setMouseOn(true)}
       onMouseLeave={() => setMouseOn(false)}
       className={`items_card ${mouseOn && 'mouse'}`}>
           <div className='bonuses'>
-              <div className='hit'>хит</div>
-              <div className='sale'>скидка</div>
-              <div className='stock'>акция</div>
+          {((Array.from(productName)).includes('a') || (Array.from(productName)).includes('а'))  && <div className='stock'>акция</div>}
+          {((Array.from(productName)).includes('o') || (Array.from(productName)).includes('о'))  &&  <div className='hit'>хит</div>}
           </div>
           <div className='card-img'>
-            <img src='./img/woman.png'/> 
           </div>
           <div className='standart'>{standart}</div>
           <h3>{productName}</h3>

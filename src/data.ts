@@ -16,7 +16,7 @@ export const productsData: IProductsState = {
             typeId: 2,
             typeName: 'weapons',
             productId: 333,
-            productName: 'sword',
+            productName: 'machine',
             price: 88888,
             standart: 'YUYUY-53',
         },

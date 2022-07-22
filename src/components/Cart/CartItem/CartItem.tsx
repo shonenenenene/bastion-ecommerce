@@ -34,7 +34,7 @@ const CartItem = ({ item}: any) => {
   return (
     <div className='cart-item'>
           <div className='cart-item-img'>
-            <img src='./img/woman.png'/>
+            
           </div>   
           <div className='cart-item-info'>
             <div className='cart-item-standart'>{ item.standart }</div>
@@ -47,8 +47,8 @@ const CartItem = ({ item}: any) => {
               <button onClick={() => countDown()} className='counter-down'>-</button>
           </div>
           <div className='cart-item-total'>{ item.price * count} руб.</div>
-      <button onClick={() => deleteItem()} type='button' className='cart-item-delete-btn'>
-            <img src='./img/trash.svg'/>
+          <button onClick={() => deleteItem()} type='button' className='cart-item-delete-btn'>
+            
           </button>
     </div>
   )

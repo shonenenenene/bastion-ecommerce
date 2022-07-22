@@ -23,6 +23,11 @@
         color: $coral;
         .clear-btn {
             margin-right: 15px;
+            background-image: url(../../../../public/img/trash.svg);
+            background-position: center;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
         }
     }
 }

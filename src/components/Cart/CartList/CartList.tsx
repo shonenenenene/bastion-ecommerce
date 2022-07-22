@@ -29,7 +29,7 @@ const CartList = () => {
         <div className='cart-list-footer'>
           <button onClick={() => clearSky()} className='cart-clear'>
             <div className='clear-btn'>
-              <img src='./img/trash.svg'/>
+              
             </div>
             <div>Очистить корзину</div>
           </button>

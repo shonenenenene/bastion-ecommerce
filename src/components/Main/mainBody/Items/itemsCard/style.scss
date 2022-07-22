@@ -38,9 +38,12 @@
     }
     .card-img {
         width: 180px;
-        height: auto;
+        height: 180px;
         align-self: center;
         margin-bottom: 25px;
+        background-image: url(../../../../../../public/img/woman.png);
+        background-position: center;
+        background-size: contain;
     }
     .standart {
         font-weight: 400;

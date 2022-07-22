@@ -7,10 +7,11 @@
     border-bottom: 1px solid #e6e6e6;
     padding: 30px 10px;
     .cart-item-img {
-        max-width: 100px;
-        img {
-            width: 100%;
-        }
+        width: 100px;
+        height: 80px;
+        background-image: url(../../../../public/img/woman.png);
+        background-position: center;
+        background-size: contain;
     }
     .cart-item-info {
         @include flex(center, flex-start);
@@ -70,6 +71,13 @@
         font-size: 18px;
         line-height: 18px;
         letter-spacing: 0.009em;
+    }
+    .cart-item-delete-btn {
+        background-image: url(../../../../public/img/trash.svg);
+        background-position: center;
+        background-size: contain;
+        width: 20px;
+        height: 20px;
     }
 
 }
