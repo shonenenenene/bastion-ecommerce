@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/bastion-ecommerce/static/css/main.52e174be.css",
+    "main.js": "/bastion-ecommerce/static/js/main.c7f1b72f.js",
+    "static/media/filter.svg": "/bastion-ecommerce/static/media/filter.3fc81ee09c0abf4f42a9.svg",
+    "static/media/cart-white.svg": "/bastion-ecommerce/static/media/cart-white.21a92a804ebfbc934c23.svg",
+    "static/media/catalogred.svg": "/bastion-ecommerce/static/media/catalogred.0201c9865ec0d76665e1.svg",
+    "static/media/catalog.svg": "/bastion-ecommerce/static/media/catalog.19df34e02c1d97ce557e.svg",
+    "static/media/viewlist.svg": "/bastion-ecommerce/static/media/viewlist.4fcc8bbae92c2455ffd9.svg",
+    "static/media/sort.svg": "/bastion-ecommerce/static/media/sort.026e8c8a817217e7a7a8.svg",
+    "static/media/mail-icon.svg": "/bastion-ecommerce/static/media/mail-icon.ef1c40177277f413a0c3.svg",
+    "static/media/order-offer.svg": "/bastion-ecommerce/static/media/order-offer.7124ffbde34b031f46ce.svg",
+    "static/media/briefcase.svg": "/bastion-ecommerce/static/media/briefcase.7959d1da5803620b8335.svg",
+    "static/media/search.svg": "/bastion-ecommerce/static/media/search.38f2adff3c5889de6b37.svg",
+    "static/media/enter.svg": "/bastion-ecommerce/static/media/enter.b6774b1d696544dc2d75.svg",
+    "static/media/user.svg": "/bastion-ecommerce/static/media/user.dcd7cc720f55a4f9f5b6.svg",
+    "static/media/backarr.svg": "/bastion-ecommerce/static/media/backarr.34566c7f61d1940779bb.svg",
+    "index.html": "/bastion-ecommerce/index.html",
+    "static/media/rightarr.svg": "/bastion-ecommerce/static/media/rightarr.ceb935bae64a0e935b08.svg",
+    "main.52e174be.css.map": "/bastion-ecommerce/static/css/main.52e174be.css.map",
+    "main.c7f1b72f.js.map": "/bastion-ecommerce/static/js/main.c7f1b72f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52e174be.css",
+    "static/js/main.c7f1b72f.js"
+  ]
+}
